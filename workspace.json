@@ -1,10 +1,28 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
+  "projects": {
+    "components": {
+      "projectType": "library",
+      "generators": {
+        "@nxext/stencil:component": {
+          "style": "scss",
+          "storybook": false
+        }
+      },
+      "root": "libs/components",
+      "sourceRoot": "libs/components/src",
+      "targets": {
+        "test": {
+          "executor": "@nxext/stencil:test",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/components/stencil.config.ts"
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nxext/stencil"
   }
 }
